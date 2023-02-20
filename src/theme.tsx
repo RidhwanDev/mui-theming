@@ -1,5 +1,5 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
-import { blue, red } from "@mui/material/colors";
+import { blue, purple, red } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
@@ -8,6 +8,9 @@ const theme = createTheme({
     },
     secondary: {
       main: red[500],
+    },
+    success: {
+      main: purple[500],
     },
   },
   components: {
@@ -22,8 +25,8 @@ const theme = createTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...(ownerState.size === "large" && {
-            width: 60,
-            height: 60,
+            width: 100,
+            height: 100,
           }),
         }),
       },
@@ -34,7 +37,7 @@ const theme = createTheme({
         {
           props: { variant: "square" },
           style: {
-            borderRadius: 20,
+            borderRadius: 10,
           },
         },
       ],

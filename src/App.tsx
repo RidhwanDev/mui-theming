@@ -18,24 +18,22 @@ function App() {
           <Typography variant="subtitle2">Hello</Typography>
         </Stack>
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" color="primary">
-            Contained primary button
-          </Button>
-          <Button variant="contained" color="secondary">
+          <Button variant="contained">Contained primary button</Button>
+          <Button variant="contained" color="success">
             Secondary Button
           </Button>
           <Button variant="outlined" color="primary" disableRipple>
             Contained outlined button
           </Button>
-          <StyledButton disableRipple variant="outlined" color="secondary">
+          <StyledButton variant="outlined" color="secondary">
             Styled button
           </StyledButton>
         </Stack>
         <Stack direction="row" spacing={2}>
-          <Fab color="primary" size="large" variant="square">
+          <Fab color="primary">
             <AddIcon />
           </Fab>
-          <Fab color="primary" size="medium">
+          <Fab color="primary" size="medium" variant="square">
             <AddIcon />
           </Fab>
           <Fab color="primary" size="small">
