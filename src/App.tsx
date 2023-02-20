@@ -1,25 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button, Container, Stack, Typography } from "@mui/material";
+import { styled } from "@mui/system";
+import { Fab } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+
+const StyledButton = styled(Button)(() => ({
+  backgroundColor: "#f6ccff",
+}));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Stack spacing={2}>
+        <Stack direction="row" spacing={2} sx={{ alignItems: "end" }}>
+          <Typography variant="h1">Hello</Typography>
+          <Typography variant="h2">Hello</Typography>
+          <Typography variant="subtitle1">Hello</Typography>
+          <Typography variant="subtitle2">Hello</Typography>
+        </Stack>
+        <Stack direction="row" spacing={2}>
+          <Button variant="contained" color="primary">
+            Contained primary button
+          </Button>
+          <Button variant="contained" color="secondary">
+            Secondary Button
+          </Button>
+          <Button variant="outlined" color="primary" disableRipple>
+            Contained outlined button
+          </Button>
+          <StyledButton disableRipple variant="outlined" color="secondary">
+            Styled button
+          </StyledButton>
+        </Stack>
+        <Stack direction="row" spacing={2}>
+          <Fab color="primary" size="large" variant="square">
+            <AddIcon />
+          </Fab>
+          <Fab color="primary" size="medium">
+            <AddIcon />
+          </Fab>
+          <Fab color="primary" size="small">
+            <AddIcon />
+          </Fab>
+        </Stack>
+      </Stack>
+    </Container>
   );
 }
 
